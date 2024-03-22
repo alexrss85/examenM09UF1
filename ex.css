@@ -1,0 +1,178 @@
+.body{
+    margin: 0;
+}
+
+
+/*MENU*/
+
+.menu{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    border: 2px solid black;
+    height: 8vh;
+    padding: 10px;
+    position: sticky;
+    z-index: 1;
+}
+
+.botonsMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.elemMenu:hover{
+    color: red;
+}
+
+/*MAIN*/
+
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/*GRID*/
+
+.section{ 
+  width: 60%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.main-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.grid{
+    margin-top: 20px;
+    width: 100%;
+    height: 70vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 0.6fr;
+    grid-template-areas: 'e4 e4 e1 e1'
+                         'e4 e4 e2 e3'
+                         'e5 e5 e5 e5';
+}
+
+.titolGrid{
+width: 100%;
+font-size: 1.7em
+}
+
+.elem{
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.e1{
+    display: flex;
+    flex-direction: column;
+    grid-area: e1;
+    background-color: aqua;
+    padding: 10px;
+}
+
+.e2{
+    grid-area: e2;
+    background-color:green
+}
+
+.e3{
+    display: flex;
+    flex-direction: column;
+    grid-area: e3;
+    background-color: plum;
+    padding: 10px;
+}
+
+.e4{
+    grid-area: e4;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.img{
+    width: 80%;
+}
+.e5{
+    grid-area: e5;
+    background-color: red
+}
+
+div>img{
+    width: 100%;
+}
+
+/*IMATGE/TEXT*/
+
+.main-imatge{
+    width: 100%;
+}
+.text-img{
+    font-size: 4.0em;
+    color: green;
+    z-index: 1;
+    position: absolute;
+    right: 150px;
+    top: 950px;
+}
+
+
+/*FOOTER*/
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    height: 8vh;
+    font-size: 1.4em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 70%;
+}
+
+.footer2{
+    float: right;
+}
+
+
+
+
+/*MEDIA QUERY*/
+
+@media only screen and (max-width: 576px){
+    .botonsMenu{
+        justify-content: center;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr 0.5fr 1fr;
+        grid-template-areas: 'e1 e1'
+                             'e4 e4'
+                             'e4 e4'
+                             'e2 e5'
+                             'e3 e3'
+    }
+    
+}
